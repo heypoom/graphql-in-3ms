@@ -1,8 +1,7 @@
-pub struct Query;
-
 use juniper::graphql_object;
-
 use crate::models::game::Crustacean;
+
+pub struct Query;
 
 #[graphql_object]
 impl Query {

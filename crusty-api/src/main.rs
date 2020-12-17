@@ -9,12 +9,11 @@ mod routes;
 use actix_cors::Cors;
 use actix_web::{http, middleware::Compress, App, HttpServer};
 
-use services::schema::create_schema;
+use std::sync::Arc;
 
+use services::schema::create_schema;
 use routes::graphql::controller::graphql_route;
 use routes::landing::controller::landing_route;
-
-use std::sync::Arc;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {

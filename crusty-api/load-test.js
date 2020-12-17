@@ -20,10 +20,8 @@ export default function loadTest() {
   const headers = {"Content-Type": "application/json"}
 
   const res = http.post(url, body, {headers})
+  console.log("Response Time =", res.timings.duration, "ms")
 
-  check(res, {
-    "is status 200": (r) => r.status === 200
-  })
-
+  check(res, {"is status 200": (r) => r.status === 200})
   sleep(0.3)
 }

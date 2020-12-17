@@ -1,3 +1,3 @@
 pub mod query;
 pub mod schema;
-// pub mod subscriptions;
+pub mod subscriptions;

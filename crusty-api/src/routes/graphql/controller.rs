@@ -1,6 +1,5 @@
 #![feature(async_closure)]
 
-
 use std::sync::Arc;
 
 use actix_web::{Error, HttpResponse, web, get, post, Result, web::ServiceConfig, HttpRequest};
@@ -51,8 +50,6 @@ async fn subscriptions(
     let rootNode = (*schema.into_inner()).clone();
 
     subscriptions_handler(request, stream, rootNode, config).await
-
-    // Ok(HttpResponse::Ok().json("{}"))
 }
 
 pub fn graphql_route(config: &mut ServiceConfig) {

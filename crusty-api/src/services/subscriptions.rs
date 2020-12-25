@@ -27,7 +27,7 @@ impl Subscription {
         let stream = tokio::time::interval(delay)
             .map(move |_| {
                 level += 1;
-                amount += 100;
+                amount += 1111;
 
                 Ok(Crustacean { level, amount })
             });
